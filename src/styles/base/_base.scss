@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; // Inherit from the body
+}
+
+html {
+  font-size: 62.5%; // 1 rem = 10px
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+.container {
+  z-index: 999;
+  max-width: 97.6rem;
+  height: 100vh;
+  margin: 0 auto;
+  opacity: 0.95;
+
+  display: grid;
+  // min-content for the content fit 2 lines 3 items per each, or 3 lines 2 items per each
+  // 40vw, height is the equal to 40view port of the width.
+  grid-template-rows: minmax(5rem, 5vh) 20vh min-content 40vw repeat(
+      3,
+      min-content
+    );
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 11.95rem) [col-end]
+    )
+    [center-end] minmax(1rem, 1fr)
+    [full-end];
+}

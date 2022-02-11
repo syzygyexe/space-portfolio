@@ -1,0 +1,75 @@
+.btn {
+  // link is a special pseudo class when the element is an anchor
+  &,
+  &:link,
+  &:visited {
+    font-weight: 400;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  // Button Styles
+  &--solid {
+    border: none;
+
+    &--primary {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    &--warning {
+      background-color: var(--warning);
+      color: var(--dark);
+    }
+
+    &--danger {
+      background-color: var(--danger);
+      color: var(--white);
+    }
+
+    &--success {
+      background-color: var(--success);
+      color: var(--white);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+
+    &--primary {
+      color: var(--primary);
+      border: 0.2rem solid var(--primary);
+    }
+
+    &--warning {
+      color: var(--warning);
+      border: 2px solid var(--warning);
+    }
+
+    &--danger {
+      color: var(--danger);
+      border: 2px solid var(--danger);
+    }
+
+    &--success {
+      color: var(--success);
+      border: 2px solid var(--success);
+    }
+  }
+
+  // Buton Sizes
+  &--medium {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+
+  &--big {
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+  }
+}

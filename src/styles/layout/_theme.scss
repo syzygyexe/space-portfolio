@@ -1,0 +1,26 @@
+.container__theme {
+  height: 100vh;
+  transition: 0.4s all linear;
+
+  &--light {
+    background-color: #fff;
+  }
+
+  &--dark {
+    background-image: linear-gradient(
+      to right top,
+      #2b2f1e,
+      #2c2d1b,
+      #2d2a19,
+      #2e2817,
+      #2e2516,
+      #2e2315,
+      #2e2214,
+      #2e2013,
+      #2e1e12,
+      #2f1d11,
+      #2f1b10,
+      #2f1910
+    );
+  }
+}
